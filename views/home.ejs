@@ -9,7 +9,7 @@
 <body>
     <%- include('./partials/nav') %>
 
-    <div class="mt-10 ml-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div class="mt-10 ml-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <% blogs.forEach(blog => { %>
         <div class="max-w-xs w-full bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
             <a href="/blog/<%= blog._id %>">
