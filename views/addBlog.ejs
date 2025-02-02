@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Add New Blog</title>
+</head>
+<body class="bg-white text-gray-900">
+    <%- include('./partials/nav') %>
+
+    <form class="max-w-7xl mx-auto p-10" action="/blog" method="post" enctype="multipart/form-data">
+
+        <div class="mb-4">
+            <label for="coverImage" class="block mb-2 text-sm font-medium text-gray-900">Upload Cover Image</label>
+            <div class="flex items-center">
+                <label for="coverImage" class="cursor-pointer bg-gradient-to-br from-green-400 to-blue-600 text-white px-4 py-2 rounded-lg hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium text-sm">
+                    Choose File
+                </label>
+                <input class="hidden" id="coverImage" type="file" name="coverImage">
+            </div>
+        </div>
+
+
+        <div class="mb-4">
+            <label for="title" class="block mb-2 text-sm font-medium text-gray-900">Title</label>
+            <input type="text" id="title" name="title" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- <div class="mb-4">
+            <label for="coverImage" class="block mb-2 text-sm font-medium text-gray-900">Upload Cover Image</label>
+            <input class="block w-full h-16 text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none focus:ring-blue-500 focus:border-blue-500" aria-describedby="coverImage" id="coverImage" type="file" name="coverImage">
+        </div> -->
+        
+        
+
+        <div class="mb-4">
+            <label for="body" class="block mb-2 text-sm font-medium text-gray-900">Body</label>
+            <textarea id="body" name="body" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"></textarea>
+        </div>
+
+        <div class="mb-4">
+            <button type="submit" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                Submit
+            </button>
+        </div>
+
+    </form>
+</body>
+</html>
